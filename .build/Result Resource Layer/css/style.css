@@ -1,0 +1,42 @@
+* {
+    font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0px auto;
+    background-color:#FFF;
+}
+
+h1 {
+    font-size: 18px;
+    margin: 0px;
+    color: #888;
+}
+
+table {
+	width: 100%;
+}
+
+th:first-child {
+	width: 50%;
+}
+
+th:last-child {
+	width: 50%;
+}
+
+.contents {
+	display: flex;
+	display: -webkit-flex;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	height:320px;
+}
+
+
+.content_text {
+	font-weight:bold;
+	font-size:5em;
+	color:#222;
+}
+
