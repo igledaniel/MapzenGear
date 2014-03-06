@@ -2,9 +2,17 @@ var SAAgent, SASocket;
 var CHANNELID = 104;
 var ProviderAppName = "GearProvider";
 
-function createHTML(log_string) {
-	var log = document.getElementById('resultBoard');
-	log.innerHTML = log.innerHTML + "<br> : " + log_string;
+function get_instruction(json) {
+	var html = "";
+	html += "<div class=\"text\">" + json.street + "</div>";
+	html += "<div class=\"direction\"><img src=\"images/ic_route_wh_" + json.instruction + ".png\" width=\"160\" height=\"160\"></div>";
+	html += "<div class=\"text\">" + json.distance + "</div>";
+	return html;
+}
+
+function set_navigation(json) {
+	var nav = document.getElementById('navigation');
+	nav.innerHTML = get_instruction(json);
 }
 
 function onerror(err) {
@@ -12,14 +20,20 @@ function onerror(err) {
 }
 
 function onreceive(channelId, data) {
-	createHTML(data);
+	var json = $.parseJSON(data);
+	if (json.connected) {
+		alert("Connected to device");
+	}
+	else {
+		set_navigation(json);
+	}
 }
 
 var agentCallback = {
 	onconnect : function(socket) {
 		SASocket = socket;
 		SASocket.setDataReceiveListener(onreceive);
-		SASocket.sendData(CHANNELID, "Connected & sending");
+		SASocket.sendData(CHANNELID, "{\"connected\" : true}");
 	},
 	onerror : onerror
 };

@@ -4,7 +4,7 @@
 <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>w7oJ7Yq9HltBScQke9DgkxWKEZcVb3rtQKtsJImUPLc=</DigestValue>
+<DigestValue>lGVR4ejyE9Xzrn+gSD0vKBeTHkOqxSrrcldTehamF+M=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -12,7 +12,7 @@
 </Reference>
 <Reference URI="css/style.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>VByPzr1aMNZYh6d48KBU3fqs/XqPFjQQ+6v5yP8LAO0=</DigestValue>
+<DigestValue>mBcqvM4/fyYP+MGbZV9ZdMwlmrni/s+c11lMZdYb0pw=</DigestValue>
 </Reference>
 <Reference URI="icon.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -132,11 +132,15 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>yaWrSenPaCJKO9XBxnIWqj187pjEnVAnnBEB2KoQv4s=</DigestValue>
+<DigestValue>l2yOfSGB72NWxfgNGCChbTOz12jhIh3qcYY6kj+9qNY=</DigestValue>
+</Reference>
+<Reference URI="js/jquery-1.9.1.js">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA=</DigestValue>
 </Reference>
 <Reference URI="js/main.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>xi0Dt2urnODMq+Be/x8uOBrJEXvT4Ld9iJYM2n9nVZU=</DigestValue>
+<DigestValue>+FtwJgegRZkmgkNtP5HpGK/XOLjAu5aYyYUzu8UueSo=</DigestValue>
 </Reference>
 <Reference URI="res/xml/accessoryservices.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -151,9 +155,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-dXXsDMceBSoR2gNOJe0U8fjeTMSb8dzG5OkApW0bEknhk2+7KtNJZFOpTNunutOc5OKGUlUmClue
-Nj7XoDgCguBEk57g93EZznJv0nvKIHRwRAG5ZdDplMB6a6jefiKZgYR6gyKN9BpJUTV9VNELG00t
-CNAGRppkvm0rXsdafX8=
+HX7COFBIqRPZJ2dSmqKWTOiHaXT4p7zNW7yQeOmD1fZtu1d/Ys6QJ1xmugbhQiv1cYiB1FQr54RV
+MT3ipQwUOydhBYtYHwJcnWTcgLy2aEn7coGKO/j0z8o3SZBHw01qxDwYOoTjlvAuK+bnw4NzTn44
+/nurDydloCHILBLX3Fo=
 </SignatureValue>
 <KeyInfo>
 <X509Data>

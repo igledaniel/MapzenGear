@@ -4,39 +4,29 @@
 
 body {
     margin: 0px auto;
-    background-color:#FFF;
+    background-color:#000;
 }
 
-h1 {
-    font-size: 18px;
-    margin: 0px;
-    color: #888;
+#navigation {
+	width: 320px;
+	height: 320px;
+	color: #FFF;
+	text-align: center;
+	font-size: 80px;
 }
 
-table {
-	width: 100%;
+.text {
+	width: 320px;
+	height: 80px;
+	color: #FFF;
+	text-align: center;
+	font-size: 40px;
+	white-space: nowrap;
+	line-height: 80px;
 }
 
-th:first-child {
-	width: 50%;
+.direction {
+	width: 320px;
+	height: 160px;
+	text-align: center;
 }
-
-th:last-child {
-	width: 50%;
-}
-
-.contents {
-	display: flex;
-	display: -webkit-flex;
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	height:320px;
-}
-
-
-.content_text {
-	font-weight:bold;
-	font-size:5em;
-	color:#222;
-}
-
