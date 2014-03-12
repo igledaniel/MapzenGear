@@ -30,4 +30,4 @@ To watch application notices while running
 
 to uninstall
 
-<pre><code>$ sdb uninstall >package_id< </code></pre>
+<pre><code>$ sdb uninstall package_id </code></pre>
