@@ -15,7 +15,7 @@ function onreceive(channelId, data) {
 	if (json.connected) {
 		mapzenDebug("Connected to device");
 	} else {
-		console.log("baldur");
+		mapzenDebug("applying json: " + data);
         new Ractive({
            el: 'navigation',
            template: '#routeTemplate',
