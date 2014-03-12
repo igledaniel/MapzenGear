@@ -2,30 +2,25 @@ var SAAgent, SASocket;
 var CHANNELID = 104;
 var ProviderAppName = "GearProvider";
 
-function get_instruction(json) {
-	var html = "";
-	html += "<img class=\"direction\" src=\"images/ic_route_wh_" + json.instruction + ".png\" width=\"116\" height=\"116\">";
-	html += "<div class=\"distance underline\">" + json.distance + "</div>";
-	html += "<div class=\"text\">" + json.street + "</div>";
-	return html;
-}
-
-function set_navigation(json) {
-	var nav = document.getElementById('navigation');
-	nav.innerHTML = get_instruction(json);
+function mapzenDebug(msg) {
+	console.log("MapzenGear:" + msg)
 }
 
 function onerror(err) {
-	alert(err);
+	mapzenDebug(err);
 }
 
 function onreceive(channelId, data) {
 	var json = $.parseJSON(data);
 	if (json.connected) {
-		alert("Connected to device");
-	}
-	else {
-		set_navigation(json);
+		mapzenDebug("Connected to device");
+	} else {
+		console.log("baldur");
+        new Ractive({
+           el: 'navigation',
+           template: '#routeTemplate',
+           data: json
+        });
 	}
 }
 
@@ -46,49 +41,50 @@ var peerAgentFindCallback = {
 				SAAgent.requestServiceConnection(peerAgent);
 			}
 			else {
-				alert("Not expected app!! : " + peerAgent.appName);
+				mapzenDebug("Not expected app!! : " + peerAgent.appName);
 			}
 		}
 		catch(err) {
-			alert(err);
+			mapzenDebug(err);
 		}
 	},
 	onerror : onerror
 };
 
 function onsuccess(agents) {
+	mapzenDebug("agents count: " + agents.length);
 	try {
 		if (agents.length > 0) {
 			SAAgent = agents[0];
 			SAAgent.setPeerAgentFindListener(peerAgentFindCallback);
 			SAAgent.findPeerAgents();
+		} else {
+			mapzenDebug("Not found SAAgent!!");
 		}
-		else {
-			alert("Not found SAAgent!!");
-		}
-	}
-	catch(err) {
-		alert(err);
+	} catch(err) {
+		mapzenDebug(err);
 	}
 }
 
 function connect() {
 	if (SASocket) {
-		alert('Already connected!');
+		mapzenDebug('Already connected!');
         return false;
     }
 	try {
+		mapzenDebug("conneting");
 		webapis.sa.requestSAAgent(onsuccess, onerror);
-	}
-	catch(err) {
-		alert(err);
+	} catch(err) {
+		mapzenDebug(err);
 	}
 }
 
 window.onload = function () {
+	mapzenDebug("onload");
 	connect();
     document.addEventListener('tizenhwkey', function(e) {
-        if(e.keyName == "back")
+        if(e.keyName == "back") {
             tizen.application.getCurrentApplication().exit();
+        }
     });    
 };
