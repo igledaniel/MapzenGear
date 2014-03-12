@@ -8,25 +8,33 @@ body {
 }
 
 #navigation {
-	width: 320px;
-	height: 320px;
-	color: #FFF;
 	text-align: center;
-	font-size: 80px;
+	padding: 20px;
+	width: 280px;
+	height: 280px;
+	color: #fff;
 }
 
 .text {
-	width: 320px;
-	height: 80px;
-	color: #FFF;
-	text-align: center;
+	color: #ccc;
 	font-size: 40px;
-	white-space: nowrap;
-	line-height: 80px;
+	padding-top: 10px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	height: 90px;
+}
+
+.distance {
+	padding-bottom: 15px;
+	font-size: 36px;
+}
+
+.underline {
+	border-bottom: 1px dashed #ccc;
+	padding-bottom: 9px
 }
 
 .direction {
-	width: 320px;
-	height: 160px;
-	text-align: center;
+	width: 116px;
+	padding-bottom: 12px;
 }

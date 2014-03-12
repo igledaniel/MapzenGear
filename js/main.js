@@ -4,9 +4,9 @@ var ProviderAppName = "GearProvider";
 
 function get_instruction(json) {
 	var html = "";
+	html += "<img class=\"direction\" src=\"images/ic_route_wh_" + json.instruction + ".png\" width=\"116\" height=\"116\">";
+	html += "<div class=\"distance underline\">" + json.distance + "</div>";
 	html += "<div class=\"text\">" + json.street + "</div>";
-	html += "<div class=\"direction\"><img src=\"images/ic_route_wh_" + json.instruction + ".png\" width=\"160\" height=\"160\"></div>";
-	html += "<div class=\"text\">" + json.distance + "</div>";
 	return html;
 }
 
