@@ -1,7 +1,7 @@
 <resources>
-    <application name="HelloBConsumers" >
+    <application name="MapzenGear" >
         <serviceProfile
-            id="/samsung/hellob"
+            id="/samsung/MapzenGear"
             name="smartview"
             role="consumer"
             version="1.0" >
